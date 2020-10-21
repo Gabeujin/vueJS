@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>directive & eventListener</title>
+</head>
+<body>
+    <div id="app">
+        <p>{{ linkToNaver }}</p>
+        <p v-html="linkToNaver"></p>
+    </hr>
+    <p>주사위 숫자 : {{ diceNum }}</p>
+    <button v-on:click="rollDice()" type="button">주사위 던지기</button>
+    <button v-on:click="addNum(2)" v-on:dbclick="minusNum(1)" type="button">숫자에 2 더하기</button>
+    <button v-on:dblclick="minusNum(1)" type="button">숫자에 1 빼기</button>
+    <button v-on:mousemove="clearNum" type="button">숫자 초기화</button>
+    <button v-on:mousemove.stop="" type="button">초기화 이벤트 종료</button>
+    <input v-on:keyup.enter="chkNm" type="text" placeholder="이름"/>
+    </div>
+</body>
+<script src="/vue.js"></script>
+<script src="directive.js"></script>
+</html>
